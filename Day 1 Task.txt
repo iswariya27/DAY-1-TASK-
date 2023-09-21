@@ -2,7 +2,7 @@ i). Write a blog on Difference between HTTP1.1 vs HTTP2
 
                                                               HTTP - The Hypertext Transfer Protocol
 
-                                    HTTP/1.1                                                                                              HTTP/2
+                           HTTP/1.1                                                                                HTTP/2
 
        1.  It works on the textual format.                                                               1. It works on the binary protocol.
 
