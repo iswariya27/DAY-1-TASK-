@@ -1,0 +1,93 @@
+i). Write a blog on Difference between HTTP1.1 vs HTTP2
+
+                                                              HTTP - The Hypertext Transfer Protocol
+
+                                    HTTP/1.1                                                                                              HTTP/2
+
+       1.  It works on the textual format.                                                               1. It works on the binary protocol.
+
+        2. There is head of line blocking that blocks all the                                 2. It allows multiplexing so one TCP connection is
+        requests behind it until it doesn’t get its all resources.                           required for multiple requests.
+  
+        3. It uses requests resource Inlining for use getting                               3. It uses PUSH frame by server that collects all
+         multiple pages                                                                                             multiple pages
+
+         4. It compresses data by itself.                                                                 4. It uses HPACK for data compression.
+
+         5. html page & server responds to you as a resource                           5. The server sends all the other files like CSS & JS 
+         sending the request and the response there is a                                    without the request of the client using the PUSH frame.
+        TCP connection established between client & server. 
+         
+         6. Introduces a warning header field to carry additional                         6. Underlying semantics of HTTP such as headers, status 
+        information about the status of a message. Can define                           codes remains the same.
+       24 status codes, error reporting is quicker and more efficient.
+
+        7. Expands on the caching support by using additional                           7. HTTP/2 does not change much in terms of caching. 
+       headers like cache-control, conditional headers like                                  With the server push feature if the client finds the resources 
+                                                                                                                                  are already present in the cache, it can cancel the pushed stream.
+                                                                                                                                   If-Match and by using entity tags.
+      
+        8. Open the web developer tool on the web browser (like Firefox).          8. The server side we have major tech giants like Google, Facebook, 
+                                                                                                                                    Nginx, etc
+
+
+
+
+ii). Write a blog about objects and its internal representation in Javascript
+
+        1. JavaScript, being a versatile programming language, offers a rich set of 
+data structures, with objects being one of the most fundamental and powerful ones.
+
+        2. JavaScript, objects are composite data types that allow you to store and 
+organize data in key-value pairs.
+
+        3. They can be created using the object literal notation or the object constructor 
+function. 
+Here's an example of an object representing a person:
+                                      var person = {
+                                              name: "iswariya",
+                                              age: 23,
+                                              session: "B52tamil"
+                                       };
+
+           4. Internally, objects in JavaScript are represented as unordered collections 
+of properties. Each property consists of a key-value pair, where the key is a string 
+and the value can be of any data type, including other objects. JavaScript engines 
+use various techniques to optimize the storage and retrieval of properties within an object.
+
+        5.  The keys are hashed to generate an index, which is used to efficiently 
+store and retrieve the corresponding values. To access properties of an object, 
+you can use dot notation or square bracket notation
+          Example:
+                                  console.log(person.name); 
+                                       Output: "iswariya"
+                                  console.log(person["age"]); 
+                                      Output: 23
+
+             6. Javascript arrays are special cases of objects.
+                     typeof([ ]) == "object" 
+
+           7. The syntax for adding a property to an object.
+           Example:
+                              var person = {
+                                              name: "iswariya",
+                                              age: 23,
+                                              session: "B52tamil"
+                               };
+                               person.age = 24;
+  
+                             console.log(person.age); 
+                                       Output: 24
+          
+             8. The syntax for deleting a property from an object.
+              Example:
+                              var person = {
+                                              name: "iswariya",
+                                              age: 23,
+                                              session: "B52tamil"
+                               };
+                             delete person.session;
+  
+                             console.log(person); 
+                                       Output:   { name: 'iswariya', age: 23 }            
+
